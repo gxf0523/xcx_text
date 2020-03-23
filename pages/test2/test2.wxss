@@ -1,0 +1,7 @@
+/* pages/test2/test2.wxss */
+.collectText{
+  margin: 20rpx 0;
+  font-size: 30rpx;
+  color: red;
+  display: block;
+}

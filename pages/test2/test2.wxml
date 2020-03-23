@@ -1,0 +1,15 @@
+<!--pages/test2/test2.wxml-->
+<text>pages/test2/test2.wxml</text>
+<view>
+  <text class='collectText' bindtap='onCollect'>点赞</text>
+  <text class='collectText' bindtap='onCollect'>点赞</text>
+  <text class='collectText' bindtap='onCollect'>点赞</text>
+  <text class='collectText' bindtap='onCollect'>点赞</text>
+  <text class='collectText' bindtap='onCollect'>点赞</text>
+  <text class='collectText' bindtap='onCollect'>点赞</text>
+  <text class='collectText' bindtap='onCollect'>点赞</text>
+  <text class='collectText' bindtap='onCollect'>点赞</text>
+  <text>{{number}}</text>
+  <text class='collectText' bindtap='onZS'>掌声</text>
+  <audio style='display:none' id="Audio" src="http://downsc.chinaz.net/Files/DownLoad/sound1/201802/9741.mp3" ></audio>
+</view>
