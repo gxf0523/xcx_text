@@ -1,0 +1,54 @@
+/* pages/hweight/hweight.wxss */
+.chose{
+  width: 750rpx;
+  height: 300rpx;
+}
+.choseTitle{
+  font-size:36rpx;
+  font-family:PingFang-SC-Medium;
+  color:rgba(51,51,51,1);
+  text-align: center;
+  margin-top: 70rpx;
+  
+}
+.greenBigTitle{
+  font-size:56rpx;
+  font-family:PingFang-SC-Bold;
+  color:rgba(0,211,162,1);
+  text-align: center;
+  margin-top: 78rpx;
+}
+.greenSmallTitle{
+font-size:28rpx;
+font-family:PingFang-SC-Regular;
+color:rgba(0,205,138,1);
+text-align: center;
+margin-left: 3rpx;
+}
+.hua{
+  margin-top: 29rpx;
+}
+.next{
+  width:560rpx;
+  height:94rpx;
+  border-radius:47px;
+  margin-left: 95rpx;
+  font-size:30rpx;
+  font-family:PingFang-SC-Regular;
+  color:rgba(255,255,255,1);
+  text-align: center;
+  line-height: 94rpx;
+  margin-top: 186rpx;
+
+}
+.yes{
+  background:rgba(0,205,138,1);
+}
+.no{
+  background:rgba(178,234,216,1);
+}
+::-webkit-scrollbar{
+width: 0;
+height: 0;
+color: transparent;
+}

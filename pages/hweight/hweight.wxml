@@ -1,0 +1,15 @@
+<!--pages/hweight/hweight.wxml-->
+<view>
+  <view class="chose">
+    <view class="choseTitle">你的身高是？</view>
+    <view class="greenBigTitle">{{height}}<span class="greenSmallTitle">厘米</span></view>
+    <scale class="hua" min="0" max="250" int="{{true}}" step="1" fiexNum="60" single="10" h="60" active="{{height}}" data-cat='1' styles="{{styles}}" bindvalue="bindvalue"></scale>
+  </view>
+  <view class="chose" style="margin-top:163rpx;">
+    <view class="choseTitle">你的体重是？</view>
+    <view class="greenBigTitle">{{weight}}<span class="greenSmallTitle">公斤</span></view>
+    <scale class="hua" min="0" max="109" int="{{false}}" step="1" fiexNum="60" single="10" h="60" active="{{weight}}" styles="{{styles}}" data-cat='2' bindvalue="bindvalue"></scale>
+  </view>
+  <!-- <view bindtap="go" class="next {{weight && height ? 'yes':'no'}}">下一步</view> -->
+</view>
+
