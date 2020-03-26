@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/test3/test3",
     "pages/hweight/hweight",
     "pages/test2/test2",
-    "pages/test3/test3",
     "pages/index/index",
     "pages/logs/logs",
     "pages/animation/animation",
