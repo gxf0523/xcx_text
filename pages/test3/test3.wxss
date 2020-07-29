@@ -1,1 +1,90 @@
 /* pages/test3/test3.wxss */
+.picture{
+  padding: 20rpx;
+}
+
+.subscribeBox{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 8;
+}
+.subscribeBox_bg{
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.6;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.subscribe_contentBox{
+  width: 580rpx;
+  height: 300rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 2;
+}
+.subscribe_contentBox_text{
+  width: 100%;
+  text-align: center;
+  padding: 65rpx;
+  padding-bottom: 0;
+  color: #333;
+  font-size: 32rpx;
+  line-height: 45rpx;
+  word-break: break-all;
+  box-sizing: border-box;
+}
+.subscribe_contentBox_btn{
+  width: 100%;
+  height: 90rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 36rpx;
+  color: #333;
+  margin: 0 auto;
+  border-top: 1rpx solid #ddd;
+  box-sizing: border-box;
+  display: flex;
+}
+.subscribe_contentBox_btn_left{
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  line-height: 90rpx;
+  text-align: center;
+  border-right: 1rpx solid #ddd;
+}
+.subscribe_contentBox_btn_right{
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+.subscribe_contentBox_btn_right_con{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  line-height: 90rpx;
+  text-align: center;
+}
+.subscribe_contentBox_btn_right_btn{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  opacity: 0;
+}

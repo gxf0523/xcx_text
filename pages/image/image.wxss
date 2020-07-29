@@ -1,0 +1,19 @@
+/* pages/image/image.wxss */
+page {
+  height: 100%;
+}
+
+.content {
+  height: 100%;
+  font-size: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.images image {
+  text-align: center;
+}

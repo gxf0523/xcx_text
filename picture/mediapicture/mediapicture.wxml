@@ -1,0 +1,8 @@
+<!--picture/mediapicture/mediapicture.wxml-->
+<view>
+  <view>
+    <button bindtap='chooseImageTap'>上传图片</button>
+    <button bindtap='saveImage'>保存</button>
+    <canvas style="width: 300px; height: 200px;" canvas-id="myCanvas"></canvas>
+  </view>
+</view>

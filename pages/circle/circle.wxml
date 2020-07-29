@@ -1,0 +1,8 @@
+<circle draw='circwewle1' per = '40' r = '50'/>
+<circle draw='circwewle2' per = '100' r = '120'/>
+<circle draw='circwewle3' per = '20' r = '100'/>
+<circle draw='circwewle' per = '50' r = '60'/>
+<circle draw='circwewle' per = '92' r = '120'/>
+draw : 确定 canvas的id
+per : 进度百分比 (1-100)
+r: 圆的半径 (按px,最终转化成rpx)

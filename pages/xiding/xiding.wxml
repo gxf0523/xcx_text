@@ -1,0 +1,20 @@
+<!--pages/xiding/xiding.wxml-->
+<view style="width: 90%; height: 300rpx; background: #f0f0f0; margin: 30rpx auto;"></view>
+<view style="width: 90%; height: 300rpx; background: #f0f0f0; margin: 30rpx auto;"></view>
+ 
+ 
+<view class="navbar-wrap">
+ <view class="column {{isFixedTop?'fixed':''}}" id="navbar">
+  <view class="block active">新品推荐</view>
+  <view class="block">限时优惠</view>
+  <view class="block">火爆热搜</view>
+  <view class="block">猜你喜欢</view>
+ </view>
+ <!-- 用于吸顶后 占位用的 -->
+ <view class="column" wx:if="{{isFixedTop}}"></view>
+</view>
+ 
+ 
+<block wx:for="{{20}}" wx:key="list">
+ <view style="width: 100%; height: 120rpx; background: #f0f0f0; margin: 20rpx auto;"></view>
+</block>

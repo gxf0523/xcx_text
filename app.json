@@ -1,6 +1,9 @@
 {
   "pages": [
+    "pages/circle/circle",
+    "pages/image/image",
     "pages/test3/test3",
+    "pages/luckyDraw/luckyDraw",
     "pages/hweight/hweight",
     "pages/test2/test2",
     "pages/index/index",
@@ -8,7 +11,16 @@
     "pages/animation/animation",
     "pages/date/date",
     "pages/scrollpage/scrollpage",
+    "pages/xiding/xiding",
     "pages/tabchange/tabchange"
+  ],
+  "subPackages": [
+    {
+      "root": "picture",
+      "pages": [
+        "mediapicture/mediapicture"
+      ]
+    }
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -2,4 +2,19 @@
 <wxs src="../../filter/filter.wxs" module="filter" />
 <view>
   <text>{{filter.subStr(title,8)}}</text>
+  <view bindtap="onMediapicture" class="picture">上传图片</view>
+  <button form-type='submit' bindtap="subscribe">订阅</button>
 </view>
+<view class="subscribeBox">
+        <view class="subscribeBox_bg"></view>
+        <view class="subscribe_contentBox">
+            <view class="subscribe_contentBox_text">允许消息通知推送，会将拼团结果告知您</view>
+            <view class="subscribe_contentBox_btn" >
+                <view class="subscribe_contentBox_btn_left" bindtap="cl_subscribe_tan">取 消</view>
+                <view class="subscribe_contentBox_btn_right" >
+                  <view class="subscribe_contentBox_btn_right_con" catchtap="subscribe">{{empower?"授 权":"确 定"}}</view>
+                  <button class="subscribe_contentBox_btn_right_btn" wx:if='{{empower}}' bindopensetting='bindopen' open-type="openSetting"></button>
+                </view>
+            </view>
+        </view>
+    </view>
