@@ -1,4 +1,20 @@
 // pages/test2/test2.js
+const date = new Date()
+const years = []
+const months = []
+const days = []
+
+for (let i = 1990; i <= date.getFullYear(); i++) {
+  years.push(i)
+}
+
+for (let i = 1; i <= 12; i++) {
+  months.push(i)
+}
+
+for (let i = 1; i <= 31; i++) {
+  days.push(i)
+}
 Page({
 
   /**
@@ -7,6 +23,14 @@ Page({
   data: {
     number: 258862,
     like:560,
+    years,
+    year: date.getFullYear(),
+    months,
+    month: 2,
+    days,
+    day: 2,
+    value: [2],
+    isDaytime: true,
   },
 
   /**
@@ -20,6 +44,86 @@ Page({
       number: number > 10000 ? (((number - number % 1000) / 10000) > 99.9 ? 99.9 + 'W' : (((number - number % 1000) / 10000) + (Math.floor(like / 5))) + 'W') : (number),
     })
   },
+  bindChange(e) {
+    const val = e.detail.value
+    this.setData({
+      year: this.data.years[val[0]],
+      month: this.data.months[val[1]],
+      day: this.data.days[val[2]],
+      isDaytime: !val[3]
+    })
+  },
+  foucus: function (e) {
+
+    var that = this;
+    
+    that.setData({
+    
+    inputBottom: e.detail.height
+    
+    })
+    
+    },
+    
+     
+    
+    //失去聚焦
+    
+    blur: function (e) {
+    
+    var that = this;
+    
+    that.setData({
+    
+    inputBottom: 0
+    
+    })
+    
+    },
+    
+    //用户输入内容--提交输入
+    
+    submit:function(){
+    
+    var that = this;
+    
+    console.info(that.data.inputText);
+    
+    if (!that.data.inputText){
+    
+    wx.showToast({
+    
+    icon:'none',
+    
+    title:'请输入内容'
+    
+    })
+    
+    return false;
+    
+    }
+    
+    talkList.push({
+    
+    who: 2,
+    
+    text: that.data.inputText
+    
+    })
+    
+    that.setData({
+    
+    talkList: talkList,
+    
+    inputText:'',
+    
+    //inputBottom: 0
+    
+    })
+    
+    that.scrollToBottom();
+    
+    },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

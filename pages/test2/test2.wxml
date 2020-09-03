@@ -1,5 +1,12 @@
 <!--pages/test2/test2.wxml-->
 <text>pages/test2/test2.wxml</text>
+<view class='inputBottom' style='bottom:{{inputBottom}}px'>
+
+<input type='text' class='textInput' value='{{inputText}}' placeholder-class='textInputPlaceHolder' placeholder='输入你想要说的...' bindinput='getInputText' bindfocus="foucus" bindblur="blur" bindconfirm='submit' adjust-position='{{false}}'></input>
+
+<text bindtap='submit' class='submit'>发送</text>
+
+</view>
 <view>
   <text class='collectText' bindtap='onCollect'>点赞</text>
   <text class='collectText' bindtap='onCollect'>点赞</text>
@@ -12,4 +19,15 @@
   <text>{{number}}</text>
   <text class='collectText' bindtap='onZS'>掌声</text>
   <audio style='display:none' id="Audio" src="http://downsc.chinaz.net/Files/DownLoad/sound1/201802/9741.mp3" ></audio>
+</view>
+<view class="container">
+  <view class="page-body">
+    <view class="selected-date">{{year}}年{{month}}月{{day}}日{{isDaytime ? "白天" : "夜晚"}}</view>
+    <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange">
+      <picker-view-column>
+        <view wx:for="{{months}}" wx:key="{{this}}" style="line-height: 50px; text-align: center;">{{item}}月</view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+
 </view>

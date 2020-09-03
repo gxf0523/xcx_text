@@ -5,3 +5,60 @@
   color: red;
   display: block;
 }
+.inputBottom{
+
+  width: 100%;
+  
+  position: fixed;
+  
+  left: 0rpx;
+  
+  bottom: 0rpx;
+  
+  background: #fff;
+  
+  height: 100rpx;
+  
+  box-sizing: border-box;
+  
+  padding: 18rpx 10rpx;
+  
+  }
+  
+  .inputBottom .textInput{
+  
+  /* border-bottom: 2rpx solid #000; */
+  
+  display: inline-block;
+  
+  width: 80%;
+  
+  }
+  
+  .inputBottom .textInputPlaceHolder{
+  
+  font-size: 30rpx;
+  
+  }
+  
+  .inputBottom .submit{
+  
+  font-size: 34rpx;
+  
+  display: inline-block;
+  
+  text-align: center;
+  
+  float: right;
+  
+  margin-right: 20rpx;
+  
+  background: green;
+  
+  border-radius: 6rpx;
+  
+  color: #fff;
+  
+  padding: 2rpx 8rpx;
+  
+  }
