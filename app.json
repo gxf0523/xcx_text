@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/canvas/canvas",
     "pages/circle/circle",
     "pages/image/image",
     "pages/test3/test3",
