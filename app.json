@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/test2/test2",
     "pages/canvas/canvas",
+    "pages/test2/test2",
     "pages/circle/circle",
     "pages/image/image",
     "pages/test3/test3",
