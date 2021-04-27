@@ -1,7 +1,6 @@
 {
   "pages": [
-    "pages/test2/test2",
-    "pages/canvas/canvas",
+    "pages/txl/txl",
     "pages/circle/circle",
     "pages/image/image",
     "pages/test3/test3",
@@ -13,7 +12,10 @@
     "pages/date/date",
     "pages/scrollpage/scrollpage",
     "pages/xiding/xiding",
-    "pages/tabchange/tabchange"
+    "pages/tabchange/tabchange",
+    "pages/maps/maps",
+    "pages/test2/test2",
+    "pages/canvas/canvas"
   ],
   "subPackages": [
     {

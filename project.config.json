@@ -1,116 +1,123 @@
 {
-	"description": "项目配置文件",
-	"packOptions": {
-		"ignore": []
-	},
-	"setting": {
-		"urlCheck": true,
-		"es6": true,
-		"postcss": true,
-		"preloadBackgroundData": false,
-		"minified": true,
-		"newFeature": true,
-		"coverView": true,
-		"autoAudits": false,
-		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false,
-		"checkInvalidKey": true,
-		"checkSiteMap": true,
-		"uploadWithSourceMap": true,
-		"compileHotReLoad": false,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		},
-		"useIsolateContext": true,
-		"useCompilerModule": false,
-		"userConfirmedUseCompilerModuleSwitch": false
-	},
-	"compileType": "miniprogram",
-	"libVersion": "2.9.5",
-	"appid": "wxec6f91d568dfbd62",
-	"projectname": "%E6%BB%91%E5%8A%A8%E9%80%89%E6%8B%A9%E8%BA%AB%E9%AB%98%E5%92%8C%E4%BD%93%E9%87%8D",
-	"debugOptions": {
-		"hidedInDevtools": []
-	},
-	"isGameTourist": false,
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"currentL": -1,
-			"list": []
-		},
-		"gamePlugin": {
-			"current": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": -1,
-			"list": [
-				{
-					"id": -1,
-					"name": "height",
-					"pathName": "pages/height/height",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "hweight",
-					"pathName": "pages/hweight/hweight",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "animation",
-					"pathName": "pages/animation/animation",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "date",
-					"pathName": "pages/date/date",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "scrollpage",
-					"pathName": "pages/scrollpage/scrollpage",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "tabchange",
-					"pathName": "pages/tabchange/tabchange",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "sliderview",
-					"pathName": "pages/sliderview/sliderview",
-					"query": "",
-					"scene": null
-				}
-			]
-		}
-	}
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": false,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "useApiHostProcess": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.9.5",
+  "appid": "wxec6f91d568dfbd62",
+  "projectname": "%E6%BB%91%E5%8A%A8%E9%80%89%E6%8B%A9%E8%BA%AB%E9%AB%98%E5%92%8C%E4%BD%93%E9%87%8D",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "currentL": -1,
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "height",
+          "pathName": "pages/height/height",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "hweight",
+          "pathName": "pages/hweight/hweight",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "animation",
+          "pathName": "pages/animation/animation",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "date",
+          "pathName": "pages/date/date",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "scrollpage",
+          "pathName": "pages/scrollpage/scrollpage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "tabchange",
+          "pathName": "pages/tabchange/tabchange",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "sliderview",
+          "pathName": "pages/sliderview/sliderview",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
 }

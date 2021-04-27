@@ -6,3 +6,5 @@
 draw : 确定 canvas的id
 per : 进度百分比 (1-100)
 r: 圆的半径 (按px,最终转化成rpx)
+
+<scrollNumber value="{{value}}"/>
