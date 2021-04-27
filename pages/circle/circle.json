@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "circle": "/components/circle/circle",
-    "scrollNumber": "/components/scrollNumber/index"
+    "scrollNumber": "/components/scrollNumber/index",
+    "sanjiao": "/components/sanjiao/index"
   }
 }

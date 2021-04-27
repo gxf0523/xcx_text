@@ -1,0 +1,16 @@
+.arrow {
+  box-sizing: border-box;
+  border-radius: 4rpx;
+}
+.left {
+  transform: rotate(135deg);
+}
+.right {
+  transform: rotate(-45deg);
+}
+.top {
+  transform: rotate(-135deg);
+}
+.bottom {
+  transform: rotate(45deg);
+}

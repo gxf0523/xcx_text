@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/txl/txl",
     "pages/circle/circle",
+    "pages/txl/txl",
     "pages/image/image",
     "pages/test3/test3",
     "pages/luckyDraw/luckyDraw",
