@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/cardReceive/cardReceive",
+    "pages/cardReceive1/cardReceive1",
     "pages/circle/circle",
     "pages/txl/txl",
     "pages/image/image",
