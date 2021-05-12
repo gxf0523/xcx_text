@@ -1,0 +1,23 @@
+<!--pages/pagezimu/pagezimu.wxml-->
+<view class="container">
+  <view class="content">
+    <view class="content-word">
+      <view class="content-move">
+        <view class="world">《星球大战》系列电影是由卢卡斯电影公司出品的科幻电影。</view>
+        <view class="world">卢卡斯电影公司首先于1977年推出了《星球大战》，</view>
+        <view class="world">之后又分别在1980年和1983年推出了《星球大战2》和《星球大战3》。/view>
+          <view class="world">之后又推出了《星球大战前》传系列，1、2、3分别于1999年、2002年和2005年上映。</view>
+          <view class="world">迪士尼收购卢卡斯影业之后正式迈入“快餐时代”。</view>
+          <view class="world">将从2015年开始，每年夏季推出一部《星球大战》题材电影</view>
+          <view class="world">预计《星球大战》的第八和第九部作品将分别于2017年和2019年上映。</view>
+          <view class="world">实际上“星球大战计划”真正的名字是“战略防御倡议”，</view>
+          <view class="world">该计划之所以被冠以“星球大战”之名是因为汉斯·贝特的一句话“如果这个计划（战略防御倡议）不幸成功了的话，</view>
+          <view class="world">简直就是一场‘星球大战’了！”</view>
+          <view class="world">后被一些媒体所接受，遂将其称之为“星球大战计划”，误导了不少人。</view>
+          <view class="world">这种叫法让一些人对星球大战电影产生了不太好的印象，</view>
+          <view class="world">个别人甚至认为星球大战电影应该为苏联的解体负责。</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

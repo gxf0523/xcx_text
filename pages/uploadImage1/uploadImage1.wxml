@@ -1,0 +1,15 @@
+<!--pages/uploadImage1/uploadImage1.wxml-->
+<view class="weui">
+  <view class="weui-uploader">
+      <view class="weui-uploader__files">
+        <block wx:for="{{imageList}}" wx:for-item="image" wx:for-index='idx'>
+          <view class="weui-uploader__file">
+            <image class="weui-uploader__img" src="{{image}}" data-id="{{idx}}" data-src="{{image}}" bindtap="previewImage"></image>
+          </view>
+        </block>
+      </view>
+      <view class="weui-uploader__input-box">
+        <view class="weui-uploader__input" bindtap="chooseImage"></view>
+      </view>
+  </view>
+  </view>
