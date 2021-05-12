@@ -1,5 +1,9 @@
 {
   "pages": [
+    "pages/pagezimu/pagezimu",
+    "pages/uploadImage1/uploadImage1",
+    "pages/uploadImage/uploadImage",
+    "pages/transform/transform",
     "pages/cardReceive/cardReceive",
     "pages/cardReceive1/cardReceive1",
     "pages/circle/circle",
