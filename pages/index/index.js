@@ -7,7 +7,113 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    demoList:[
+      {
+        "title":"上传图片没限制",
+        "url":"../uploadImage1/uploadImage1",
+      },
+      {
+        "title":"上传图片限制4张",
+        "url":"../uploadImage/uploadImage",
+      },
+      {
+        "title":"信件弹框翻页",
+        "url":"../cardReceive/cardReceive",
+      },
+      {
+        "title":"点击弹框翻转",
+        "url":"../cardReceive1/cardReceive1",
+      },
+      {
+        "title":"canvas圆环进度",
+        "url":"../circle/circle",
+      },
+      {
+        "title":"通讯录",
+        "url":"../txl/txl",
+      },
+      {
+        "title":"image宽度100%，高度自适应",
+        "url":"../image/image",
+      },
+      {
+        "title":"订阅消息弹框",
+        "url":"../test3/test3",
+      },
+      {
+        "title":"九宫格抽奖",
+        "url":"../luckyDraw/luckyDraw",
+      },
+      {
+        "title":"身高体重刻度尺",
+        "url":"../hweight/hweight",
+      },
+      {
+        "title":"时间日志",
+        "url":"../logs/logs",
+      },
+      {
+        "title":"菜单栏切换",
+        "url":"../animation/animation",
+      },
+      {
+        "title":"日历显示当前天所在的一周",
+        "url":"../date/date",
+      },
+      {
+        "title":"横向切换页面模块",
+        "url":"../scrollpage/scrollpage",
+      },
+      {
+        "title":"吸顶",
+        "url":"../xiding/xiding",
+      },
+      {
+        "title":"tab切换",
+        "url":"../tabchange/tabchange",
+      },
+      {
+        "title":"地图",
+        "url":"../maps/maps",
+      },
+      {
+        "title":"点赞",
+        "url":"../test2/test2",
+      },
+      {
+        "title":"canvas生成图片并保存到本地相册",
+        "url":"../canvas/canvas",
+      },
+      {
+        "title":"pagezimu",
+        "url":"../pagezimu/pagezimu",
+      },
+      {
+        "title":"transform",
+        "url":"../transform/transform",
+      },
+    ],
+    listData:[],
+    inputText:'',
+  },
+  bindinput:function(e){
+    var value = e.detail.value;
+    const { demoList } = this.data;
+    var arr = [];
+    if(value){
+      for(var i=0;i<demoList.length;i++){
+        if(demoList[i].title.indexOf(value)!=-1){
+          arr.push(demoList[i])
+        }
+      }
+    }else{
+      arr = demoList;
+    }
+    this.setData({
+      inputText:value,
+      listData:arr
+    })
   },
   //事件处理函数
   bindViewTap: function() {
@@ -16,6 +122,9 @@ Page({
     })
   },
   onLoad: function () {
+    this.setData({
+      listData:this.data.demoList
+    })
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

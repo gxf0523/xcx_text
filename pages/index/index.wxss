@@ -15,7 +15,17 @@
 .userinfo-nickname {
   color: #aaa;
 }
-
-.usermotto {
-  margin-top: 200px;
+.demoInput{
+  width: 500rpx;
+  border: 1rpx solid #ccc;
+  padding: 5rpx 15rpx;
+  font-size: 28rpx;
+}
+.functionListBox {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 100%;
+  flex: 1;
 }

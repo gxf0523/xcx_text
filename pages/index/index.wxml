@@ -7,7 +7,12 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view style="margin-top:50rpx;font-size:40rpx;">demo列表
+    <input type="text" class="demoInput" value="{{inputText}}" bindinput="bindinput"/>
+  </view>
+  <view class="functionListBox">
+    <block wx:for="{{listData}}" wx:key="index">
+      <navigator style="margin:10rpx 0" url="{{item.url}}">{{item.title}}</navigator>
+    </block>
   </view>
 </view>

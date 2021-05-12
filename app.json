@@ -1,9 +1,8 @@
 {
   "pages": [
-    "pages/pagezimu/pagezimu",
+    "pages/index/index",
     "pages/uploadImage1/uploadImage1",
     "pages/uploadImage/uploadImage",
-    "pages/transform/transform",
     "pages/cardReceive/cardReceive",
     "pages/cardReceive1/cardReceive1",
     "pages/circle/circle",
@@ -12,7 +11,6 @@
     "pages/test3/test3",
     "pages/luckyDraw/luckyDraw",
     "pages/hweight/hweight",
-    "pages/index/index",
     "pages/logs/logs",
     "pages/animation/animation",
     "pages/date/date",
@@ -21,7 +19,9 @@
     "pages/tabchange/tabchange",
     "pages/maps/maps",
     "pages/test2/test2",
-    "pages/canvas/canvas"
+    "pages/canvas/canvas",
+    "pages/pagezimu/pagezimu",
+    "pages/transform/transform"
   ],
   "subPackages": [
     {
