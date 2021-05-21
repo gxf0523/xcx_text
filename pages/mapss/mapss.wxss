@@ -1,0 +1,4 @@
+/* pages/mapss/mapss.wxss */
+input{
+  border: 1px solid #aaa;
+}

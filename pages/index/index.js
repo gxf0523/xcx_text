@@ -93,6 +93,18 @@ Page({
         "title":"transform",
         "url":"../transform/transform",
       },
+      {
+        "title":"物流状态完整",
+        "url":"../wuliumInfo/wuliumInfo",
+      },
+      {
+        "title":"物流状态列表",
+        "url":"../logisticsConfidence/logisticsConfidence",
+      },
+      {
+        "title":"物流状态上的地图",
+        "url":"../mapss/mapss",
+      },
     ],
     listData:[],
     inputText:'',

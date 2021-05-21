@@ -1,0 +1,322 @@
+/* pages/wuliumInfo/wuliumInfo.wxss */
+page {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.customCallout {
+  padding: 20rpx 30rpx;
+  background-image: -webkit-linear-gradient(left, #f38e2e, #fb5522);
+  color: #fff;
+  box-shadow: 0 -1rpx 6rpx rgba(0, 0, 0, 0.1);
+  border-radius: 10rpx;
+  position: relative;
+  overflow: initial;
+}
+
+.customCalloutClose {
+  position: absolute;
+  width: 42rpx;
+  height: 42rpx;
+  top: -21rpx;
+  right: -21rpx;
+  z-index: 10;
+}
+
+.customCalloutSanjiao {
+  position: absolute;
+  left: 50%;
+  bottom: -10rpx;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10rpx solid transparent;
+  border-right: 10rpx solid transparent;
+  border-top: 10rpx solid #fb5522;
+}
+
+.courierTel {
+  position: absolute;
+  bottom: 16rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 646rpx;
+  height: 72rpx;
+  background: #FFFFFF;
+  border-radius: 4rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40rpx;
+}
+
+.courierTelL {
+  display: flex;
+  align-items: center;
+}
+
+.courierAvatar {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+}
+
+.courierName {
+  font-size: 24rpx;
+  font-weight: 500;
+  color: #333333;
+  margin-left: 20rpx;
+}
+
+.courierAvg {
+  margin-left: 20rpx;
+  font-size: 20rpx;
+  font-weight: 400;
+  color: #333333;
+}
+
+.courierStar {
+  width: 16rpx;
+  height: 16rpx;
+  margin-left: 6rpx;
+}
+
+.Mapphone {
+  width: 40rpx;
+  height: 40rpx;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+button::after {
+  border: none;
+  background: none;
+}
+
+.expressScroll {
+  height: calc(100vh - 289px);
+}
+
+
+.topExpress {
+  width: 690rpx;
+  background: #fff;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 26rpx 0;
+}
+
+.topExpress-left {
+  font-size: 24rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #333333;
+}
+
+.topExpress-right {
+  font-size: 24rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #333333;
+}
+
+.expressRecord {
+  width: 690rpx;
+  padding-top: 10rpx;
+  padding-bottom: 50rpx;
+  background: #fff;
+  margin: 0 auto;
+}
+
+.expressRecord-getAddress {
+  width: 100%;
+  font-size: 22rpx;
+  color: #999;
+  display: flex;
+}
+
+.expressRecord-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.getAddress-left {
+  width: 130rpx;
+  height: 100%;
+  display: flex;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.getAddress-line {
+  width: 1rpx;
+  /* height: 100%; */
+  height: calc(100% + 26rpx);
+  position: absolute;
+  /* top: 50%;
+   transform: translateY(10px); */
+  right: 0;
+  border-right: 2rpx dashed #C8C8C8;
+}
+
+.getAddress-icon {
+  position: absolute;
+  width: 22rpx;
+  height: 22rpx;
+  border-radius: 2rpx;
+  transform: translateY(-50%) rotate(45deg);
+  background: #999;
+  font-size: 12rpx;
+  color: #fff;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  right: -11rpx;
+}
+
+.getAddress-iconText {
+  transform: rotate(-45deg);
+}
+
+.getAddress-text {
+  margin-left: 34rpx;
+  line-height: 28rpx;
+}
+
+.expressRecord-single-close {
+  width: 100%;
+  display: flex;
+  margin-top: 26rpx;
+}
+
+.yincangLineFirst {
+  width: 10rpx;
+  height: 70rpx;
+  background: #fff;
+  position: absolute;
+  bottom: 50%;
+  left: -5rpx;
+}
+
+.yincangLineLast {
+  width: 10rpx;
+  height: 70rpx;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: -5rpx;
+}
+
+.dot-closing {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  right: -16rpx;
+  width: 32rpx;
+  height: 32rpx;
+  background: #CF3D3D;
+  border-radius: 2rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot-closingHome {
+  transform: rotate(-45deg);
+  width: 18rpx;
+  height: 18rpx;
+}
+
+.dot-close {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  right: -11rpx;
+  width: 22rpx;
+  height: 22rpx;
+  background: #999999;
+  border-radius: 2rpx;
+}
+
+.online-bottom-start {
+  width: 1rpx;
+  height: 50rpx;
+  /* background: #999; */
+  margin-left: 95rpx;
+}
+
+.expressRecord-text {
+  margin-left: 34rpx;
+}
+
+.expressRecord-statusing {
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  color: #333333;
+}
+
+.expressRecord-date-text,
+.expressRecord-date-time {
+  font-size: 20rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+}
+
+.expressRecord-date-text {
+  margin-right: 20rpx;
+}
+
+.expressRecord-status-addressing {
+  font-size: 20rpx;
+  font-weight: 400;
+  color: #333;
+  line-height: 28rpx;
+}
+
+
+.expressRecord-status {
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  color: #999999;
+}
+
+.expressRecord-status-address {
+  font-size: 22rpx;
+  color: #999;
+  line-height: 28rpx;
+}
+
+.expressRecord-dating {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 30rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}
+
+.expressRecord-date {
+  position: absolute;
+  height: 100%;
+  /* top: 0;
+  bottom: 0; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 30rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #999999;
+}

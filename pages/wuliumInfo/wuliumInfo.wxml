@@ -1,0 +1,196 @@
+<!--pages/wuliumInfo/wuliumInfo.wxml-->
+<map longitude="{{markers[2].longitude}}" latitude="{{markers[2].latitude}}" scale="12" polyline="{{polyline}}"
+  markers="{{markers}}" bindcallouttap="closeMapTips" style="width: 100%; height: 289px;">
+  <cover-view wx:if="{{isCallout}}" slot="callout">
+    <block wx:for="{{markers}}" wx:key="index">
+      <cover-view class="customCallout" wx:if="{{item.id==2}}" marker-id="{{item.id}}">
+        <cover-image class="customCalloutClose" data-type="close" src="../../image/closeBtn.png"></cover-image>
+        <cover-view class="content">
+          这个是自定义气泡{{item.id}}
+        </cover-view>
+        <cover-view class="customCalloutSanjiao"></cover-view>
+      </cover-view>
+    </block>
+  </cover-view>
+  <cover-view class="courierTel">
+    <cover-view class="courierTelL">
+      <cover-image class="courierAvatar" src="https://tu.duia.com/mp/pk/no_herder.png"></cover-image>
+      <cover-view class="courierName">石磊</cover-view>
+      <cover-view class="courierAvg">4.98</cover-view>
+      <cover-image class="courierStar" src="../../image/star.png"></cover-image>
+    </cover-view>
+    <cover-view bindtap="callTel" class="Mapphone" style="background-image:url(../../image/phone.png);"></cover-view>
+  </cover-view>
+</map>
+<scroll-view scroll-y="true" class="expressScroll">
+
+  <view class='topExpress'>
+    <view class='topExpress-left'>运单号：{{WaybillNo}}</view>
+    <view class='topExpress-right' bindtap="copyOddNumber">复制</view>
+  </view>
+  <!-- 物流时间轴 -->
+  <view class='expressRecord'>
+    <!-- 顶部收货地址 -->
+    <view class='expressRecord-getAddress'>
+      <view class='expressRecord-top'>
+        <view class="getAddress-left">
+          <view class="getAddress-line">
+            <view class="yincangLineFirst"></view>
+          </view>
+          <view class='getAddress-icon'>
+            <view class='getAddress-iconText'>收</view>
+          </view>
+        </view>
+
+        <view class='getAddress-text'>[收货地址] 广东省深圳市南山区 南山街道 亿利达大厦市南山区 南山街道 亿道 亿利达大厦市南山区</view>
+      </view>
+    </view>
+
+
+    <!-- 单个物流记录点时间轴：当前正在进行的物流状态 -->
+    <view class='expressRecord-single-close'>
+      <view class="expressRecord-top">
+        <!-- 左边子容器 -->
+
+        <!-- 正在进行的时间轴点 -->
+        <view class="getAddress-left">
+          <view class="getAddress-line"></view>
+          <view class='expressRecord-dating'>
+            运输中
+          </view>
+          <view class='dot-closing'>
+            <image class="dot-closingHome" src="../../image/home.png"></image>
+          </view>
+        </view>
+
+        <!-- 右边子容器 -->
+        <view class='expressRecord-text'>
+          <view class='expressRecord-statusing'>
+            <view class='expressRecord-date-text'>
+              昨天
+            </view>
+            <view class='expressRecord-date-time'>
+              20:39
+            </view>
+          </view>
+          <view class='expressRecord-status-addressing'>广东省深圳市南山区 南山街道 亿利达大厦市南山区 南山街道 亿道 亿利达大厦市南山区</view>
+        </view>
+      </view>
+
+
+    </view>
+
+
+    <!-- 单个物流记录点时间轴：已经过去的物流状态 -->
+    <view class='expressRecord-single-close'>
+      <view class='expressRecord-single-noReach-online-top-close'>
+        <view class="getAddress-left">
+          <view class="getAddress-line"></view>
+          <view class='expressRecord-date'>
+            运输中
+          </view>
+          <view class='dot-close'></view>
+        </view>
+      </view>
+
+      <view class='expressRecord-text'>
+        <view class='expressRecord-status'>
+          <view class='expressRecord-date-text'>
+            昨天
+          </view>
+          <view class='expressRecord-date-time'>
+            20:37
+          </view>
+        </view>
+        <view class='expressRecord-status-address'>广东省深圳市南山区 南山街道 亿利达大厦市南山区 南山街道 亿道 亿利达大厦市南山区广东省深圳市南山区 南山街道
+          亿利达大广东省深圳市南山区 南山街道 亿利达大厦市南山区 南山街道 亿道 亿利达大厦市南山区广东省深圳市南山区 南山街道 亿利达大厦市南山区 南山街道 亿道 亿利达大厦市南山区</view>
+      </view>
+
+
+    </view>
+
+
+
+
+    <view class='expressRecord-single-close'>
+      <view class='expressRecord-single-noReach-online-top-close'>
+        <view class="getAddress-left">
+          <view class="getAddress-line"></view>
+          <view class='expressRecord-date'>
+            运输中
+          </view>
+          <view class='dot-close'></view>
+        </view>
+      </view>
+
+      <view class='expressRecord-text'>
+        <view class='expressRecord-status'>
+          <view class='expressRecord-date-text'>
+            昨天
+          </view>
+          <view class='expressRecord-date-time'>
+            14:37
+          </view>
+        </view>
+        <view class='expressRecord-status-address'>广东省深圳市南山区 南山街道 亿利达大厦市南山区 南山街道 亿道 亿利达大厦市南山区</view>
+      </view>
+
+    </view>
+
+    <view class='expressRecord-single-close'>
+      <view class='expressRecord-single-noReach-online-top-close'>
+        <view class="getAddress-left">
+          <view class="getAddress-line"></view>
+          <view class='expressRecord-date'>
+            已揽件
+          </view>
+          <view class='dot-close'></view>
+        </view>
+      </view>
+
+      <view class='expressRecord-text'>
+        <view class='expressRecord-status'>
+          <view class='expressRecord-date-text'>
+            昨天
+          </view>
+          <view class='expressRecord-date-time'>
+            14:17
+          </view>
+        </view>
+        <view class='expressRecord-status-address'>广东省深圳市南山区 南山街道 亿利达大厦市南山区 南山街道 亿道 亿利达大厦市南山区</view>
+      </view>
+
+    </view>
+
+
+
+
+
+    <view class='expressRecord-single-close'>
+      <view class='expressRecord-single-noReach-online-top-close'>
+        <view class="getAddress-left">
+          <view class="getAddress-line">
+            <view class="yincangLineLast"></view>
+          </view>
+          <view class='expressRecord-date'>
+            已发货
+          </view>
+          <view class='dot-close'></view>
+        </view>
+      </view>
+
+      <view class='expressRecord-text'>
+        <view class='expressRecord-status'>
+          <view class='expressRecord-date-text'>
+            昨天
+          </view>
+          <view class='expressRecord-date-time'>
+            13:50
+          </view>
+        </view>
+        <view class='expressRecord-status-address'>卖家发货</view>
+      </view>
+
+    </view>
+  </view>
+</scroll-view>

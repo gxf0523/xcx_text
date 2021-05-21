@@ -1,4 +1,5 @@
 //app.js
+// appId:wxea3eceb5d198d98e
 App({
   onLaunch: function () {
     // 展示本地存储能力
