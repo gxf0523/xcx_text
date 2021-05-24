@@ -106,8 +106,8 @@ Page({
         "url":"../mapss/mapss",
       },
       {
-        "title":"画板",
-        "url":"../drawBoard/drawBoard",
+        "title":"填写收货地址",
+        "url":"../address/address",
       },
     ],
     listData:[],

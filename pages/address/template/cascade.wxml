@@ -3,9 +3,9 @@
   <view class="cascade_hei"></view>
    <view class="cascade_find">
         <view class="cascade_header">
-          <image class='quxiao' catchtap="quxiao" src='https://tu.duia.com/mp/pk/cityclose.png' style='width:40rpx;height:40rpx;'></image>
+          <image class='quxiao' catchtap="quxiao" src='/image/cityclose.png' style='width:40rpx;height:40rpx;'></image>
           <view>{{title}}</view>
-          <image class="queren" catchtap="queren" src='https://tu.duia.com/mp/pk/cityRight.png' style='width:40rpx;height:40rpx;'></image>
+          <image class="queren" catchtap="queren" src='/image/cityRight.png' style='width:40rpx;height:40rpx;'></image>
         </view>
         <picker-view class="picker-view" indicator-style="height: 80rpx;" style="width: 100%; height: 370rpx;" bindchange="bindchange">
             <picker-view-column >
