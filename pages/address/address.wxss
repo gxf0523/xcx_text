@@ -1,0 +1,87 @@
+/* pages/address/address.wxss */
+@import './template/cascade.wxss';
+
+page {
+  background: linear-gradient(0deg, #FE964D 0%, #C565ED 64%, #31A6FF 100%);
+}
+
+.addressItem {
+  display: flex;
+  flex-direction: column;
+  margin: 0 30rpx;
+  margin-top: 32rpx;
+  border-bottom: 1rpx dashed #FFFFFF;
+  padding-bottom: 10rpx;
+}
+
+.addressItem:not(:first-of-type) {
+  margin-top: 40rpx;
+}
+
+.address_title {
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin-bottom: 24rpx;
+}
+
+.input_class,
+.address_input3 {
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #FFFFFF;
+  opacity: 0.4;
+}
+
+.address_input {
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.address_re {
+  position: relative;
+}
+
+.sanjiao {
+  position: absolute;
+  top: 50%;
+  right: 20rpx;
+  transform: translateY(-50%);
+}
+
+.button1 {
+  width: 501rpx;
+  height: 100rpx;
+  border: 2rpx solid #FFFFFF;
+  background: linear-gradient(-90deg, #FFB741 0%, #FFD440 100%);
+  box-shadow: 0px 5px 19px 1px rgba(242, 182, 84, 0.19);
+  border-radius: 50rpx;
+  margin: 80rpx auto;
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button2 {
+  width: 501rpx;
+  height: 100rpx;
+  border: 2rpx solid #FFFFFF;
+  background: linear-gradient(-90deg, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.24) 100%);
+  border-radius: 50rpx;
+  margin: 80rpx auto;
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,7 +1,7 @@
 module.exports = {
   // 截取字符串
   subStr: function (val, length) {
-    if (val.length > length) {
+    if (val && val.length > length) {
       val = val.substring(0, length) + '...';
     }
     return val;

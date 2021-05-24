@@ -105,6 +105,10 @@ Page({
         "title":"物流状态上的地图",
         "url":"../mapss/mapss",
       },
+      {
+        "title":"画板",
+        "url":"../drawBoard/drawBoard",
+      },
     ],
     listData:[],
     inputText:'',

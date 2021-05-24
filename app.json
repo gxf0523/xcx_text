@@ -24,7 +24,8 @@
     "pages/transform/transform",
     "pages/wuliumInfo/wuliumInfo",
     "pages/logisticsConfidence/logisticsConfidence",
-    "pages/mapss/mapss"
+    "pages/mapss/mapss",
+    "pages/address/address"
   ],
   "subPackages": [
     {

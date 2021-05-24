@@ -1,0 +1,39 @@
+<!--pages/address/address.wxml-->
+<import src="./template/cascade.wxml" />
+
+<wxs src="../../filter/filter.wxs" module="filter" />
+
+<view class="addressBox">
+  <view class="addressItem">
+    <view class="address_title">收货人姓名</view>
+    <input class="address_input" type="text" placeholder-class='input_class' placeholder="请填写收货人姓名，2-15字符"
+      value="{{addressData.name}}" maxlength="15" bindinput="nameInput" />
+  </view>
+  <view class="addressItem">
+    <view class="address_title">收货人号码</view>
+    <input class="address_input" type="text" placeholder-class='input_class' placeholder="请填写收货人手机号码"
+      value="{{addressData.mobile}}" maxlength="11" bindinput="mobileInput" />
+  </view>
+  <view class="addressItem">
+    <view class="address_title">地址</view>
+    <view class="address_re {{selectCount>0?'address_input':'address_input3'}}" bindtap="changeAddress">
+      {{selectCount>0?filter.subStr(jieguo,14):filter.subStr(firstArea,14)}}
+      <view class="sanjiao">
+        <sanjiao direction='bottom' borderWidth='4' width='24' height='12' borderColor='white' />
+
+      </view>
+    </view>
+  </view>
+  <view class="addressItem">
+    <view class="address_title">详细地址</view>
+    <input class="address_input" type="text" placeholder-class='input_class' placeholder="请填写详细信息"
+      value="{{addressData.detailAddress}}" maxlength="130" bindinput="detailAddressInput" />
+  </view>
+  <view
+    class="{{(name != '' && mobile != '' && detailAddress != '' && selectArea.province != '' && selectArea.city != '' && selectArea.county != '')?'button1':'button2'}}"
+    bindtap="{{(name != '' && mobile != '' && detailAddress != '' && selectArea.province != '' && selectArea.city != '' && selectArea.county != '')?'confirm':''}}">
+    确认</view>
+</view>
+
+<!-- 地址选择弹层 -->
+<template is="cascade" data="{{title,sheng,shi,qu,isShow}}" />

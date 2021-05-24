@@ -1,0 +1,65 @@
+.cascade_box{
+  font-size:28rpx;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index:11 ;
+}
+.cascade_hei{
+  width: 100%;
+  height:100%;
+  background: #000;
+  opacity: 0.5;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.cascade_find{
+  width: 100%;
+  border-radius:30rpx 30rpx 0px 0px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.quxiao,.queren{
+  width: 100rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #0f0;
+}
+
+.cascade_header{
+  height: 90rpx;
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  position: relative;
+  font-size: 32rpx;
+  border-bottom: 1rpx solid #DCDCDC;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cascade_header view{
+width: 50%;
+height: 100%;
+text-align: center;
+line-height: 90rpx;
+}
+.picker-view{
+margin: 70rpx 0;
+margin-bottom: 50rpx;
+}
+.listText{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
