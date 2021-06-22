@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "AlertModal": "../../components/alertModal/alertModal"
+  }
+}

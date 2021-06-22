@@ -1,0 +1,22 @@
+<!-- components/alertModal/alertModal.wxml -->
+<view class="cu-modal {{modalData.show?'show':''}}">
+  <view class="cu-dialog modalBox">
+    <view class="cu-bar bg-white justify-end modalTitleBox">
+      <view class="content">{{modalData.title}}</view>
+      <view class="action actionCloseBtn" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl ModalPaddingCon">
+      <image class="modalImg" src="{{modalData.image}}"></image>
+      <view class="modalContent">{{modalData.content}}</view>
+    </view>
+    <view wx:if="{{modalData.btnNum=='1'}}" class="cu-bar bg-white modalFootBox">
+      <view class="action margin-0 flex-sub btnOne {{modalData.btnColor}}" bindtap="hideModal">{{modalData.btnText}}</view>
+    </view>
+    <view wx:if="{{modalData.btnNum=='2'}}" class="cu-bar bg-white modalFootBox">
+      <view class="action margin-0 flex-sub btnTwo Grey" bindtap="hideModal">取消</view>
+      <view class="action margin-0 flex-sub btnThree {{modalData.btnColor}}" bindtap="hideModal">{{modalData.btnText}}</view>
+    </view>
+  </view>
+</view>

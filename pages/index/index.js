@@ -109,6 +109,10 @@ Page({
         "title":"填写收货地址",
         "url":"../address/address",
       },
+      {
+        "title":"弹框",
+        "url":"../colorUIModel/colorUIModel",
+      }
     ],
     listData:[],
     inputText:'',

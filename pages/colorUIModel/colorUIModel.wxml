@@ -1,0 +1,6 @@
+<!--pages/colorUIModel/colorUIModel.wxml-->
+<view class="pageBox">
+  <view class="modelBtn" bindtap="showModal" data-target="1">一个按钮弹框</view>
+  <view class="modelBtn" bindtap="showModal" data-target="2">两个按钮弹框</view>
+</view>
+<AlertModal bind:hideModal="hideModal" modalData="{{modalData}}"></AlertModal>

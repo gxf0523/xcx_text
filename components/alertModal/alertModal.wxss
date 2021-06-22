@@ -1,0 +1,80 @@
+@import "/colorui/main.wxss";
+@import "/colorui/icon.wxss";
+.modalBox{
+  width: 550rpx;
+  background: #FFFFFF;
+  border-radius: 26rpx;
+  padding: 28rpx 0 66rpx 0;
+}
+.modalTitleBox{
+  min-height: 60rpx;
+  font-size: 32rpx;
+  font-weight: 400;
+  color: #333333;
+}
+.actionCloseBtn{
+  min-height: 60rpx!important;
+}
+.ModalPaddingCon{
+  padding: 0 0 55rpx 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modalImg{
+  width: 450rpx;
+  height: 296rpx;
+  background: red;
+  margin-bottom: 25rpx;
+}
+.modalContent{
+  width: 450rpx;
+  font-size: 28rpx;
+  font-weight: 400;
+  color: #757575;
+}
+.modalFootBox{
+  min-height: 80rpx;
+  justify-content: center;
+}
+.btnOne{
+  max-width: 350rpx!important;
+  min-height: 80rpx;
+  border-radius: 40rpx;
+  font-size: 32rpx!important;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+.btnTwo{
+  max-width: 188rpx!important;
+  min-height: 80rpx;
+  border-radius: 40rpx;
+  font-size: 32rpx!important;
+  font-weight: 400;
+  color: #333333;
+}
+.btnThree{
+  max-width: 188rpx!important;
+  min-height: 80rpx;
+  border-radius: 40rpx;
+  font-size: 32rpx!important;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin-left: 56rpx;
+}
+.Violet{
+  background: linear-gradient(90deg, #684DB1 0%, #645394 99%);
+  box-shadow: 0rpx 15rpx 30rpx 0rpx rgba(103, 86, 153, 0.3);
+}
+.Grey{
+  background: #EEEEEE;
+  box-shadow: 0rpx 15rpx 30rpx 0rpx rgba(232, 232, 232, 0.3);
+}
+.Orange{
+  background: linear-gradient(-90deg, #F26322 31%, #FC8047 100%);
+  box-shadow: 0px 15px 30px 0px rgba(242, 99, 34, 0.3);
+}
+.Green{
+  background: linear-gradient(-90deg, #67C103 34%, #75D708 100%);
+  box-shadow: 0px 15px 30px 0px rgba(43, 166, 33, 0.3);
+}
