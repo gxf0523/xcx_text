@@ -11,7 +11,6 @@ Component({
   },
   methods: {
     hideModal:function(){
-      console.log('111')
       this.triggerEvent('hideModal');
     }
    
