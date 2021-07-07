@@ -6,6 +6,7 @@ Page({
    */
   data: {
     backgroundImg:'',
+    pixelRatio:1,
   },
 
   /**
@@ -27,6 +28,14 @@ Page({
     })
   },
   waterRemark(drawTitle='gaoyuanyuan',drawTime='2021-07-07:11:55:56'){
+    var that = this;
+    wx.getSystemInfo({
+      success: (res) => {
+        that.setData({
+          pixelRatio:res.pixelRatio
+        })
+      },
+    })
     const ctx = wx.createCanvasContext('watermarkCanvas');
     ctx.rotate(10*Math.PI/180);
     ctx.setFontSize(12);
@@ -43,6 +52,8 @@ Page({
         y:0,
         width:130,
         height:90,
+        // destHeight:90*that.data.pixelRatio,
+        // destWidth:130*that.data.pixelRatio,
         canvasId: 'watermarkCanvas',
         success:(res)=>{
           console.log(res)
