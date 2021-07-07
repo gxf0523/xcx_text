@@ -1,0 +1,7 @@
+<!--pages/watermark/watermark.wxml-->
+<view class='water-mark-mask'>
+  <view class='row' wx:for="{{rows}}" wx:key="index">
+    <view class='col' wx:for="{{cols}}" wx:key="index" style="color:{{color}}">{{text}}</view>
+  </view>
+</view>
+<view>111111111</view>

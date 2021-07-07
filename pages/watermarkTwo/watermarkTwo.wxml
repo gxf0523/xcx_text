@@ -1,0 +1,4 @@
+<!--pages/watermarkTwo/watermarkTwo.wxml-->
+<canvas class="canvas" canvas-id="watermarkCanvas"></canvas>
+<view class="watermark" style="background-image:url({{backgroundImg}})"></view>
+<view>2222</view>

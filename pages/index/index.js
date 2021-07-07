@@ -112,6 +112,14 @@ Page({
       {
         "title":"弹框",
         "url":"../colorUIModel/colorUIModel",
+      },
+      {
+        "title":"水印1",
+        "url":"../watermark/watermark",
+      },
+      {
+        "title":"水印2",
+        "url":"../watermarkTwo/watermarkTwo",
       }
     ],
     listData:[],

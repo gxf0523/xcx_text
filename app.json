@@ -25,7 +25,9 @@
     "pages/wuliumInfo/wuliumInfo",
     "pages/logisticsConfidence/logisticsConfidence",
     "pages/mapss/mapss",
-    "pages/colorUIModel/colorUIModel"
+    "pages/colorUIModel/colorUIModel",
+    "pages/watermark/watermark",
+    "pages/watermarkTwo/watermarkTwo"
   ],
   "subPackages": [
     {
