@@ -120,6 +120,10 @@ Page({
       {
         "title":"水印2",
         "url":"../watermarkTwo/watermarkTwo",
+      },
+      {
+        "title":"计时器",
+        "url":"../timer/timer",
       }
     ],
     listData:[],

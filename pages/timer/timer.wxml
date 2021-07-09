@@ -1,0 +1,11 @@
+<!--pages/timer/timer.wxml-->
+<view class="timerBox">
+  <view class="time">{{hour}}</view>
+  <view class="colon">:</view>
+  <view class="time">{{minutes}}</view>
+  <view class="colon">:</view>
+  <view class="time">{{seconds}}</view>
+  <view class="colon">:</view>
+  <view class="time">{{ms}}</view>
+</view>
+<view class="timerBtn"><text bindtap="startTime">开始计时</text><text bindtap="stopTime">暂停</text><text bindtap="clearTime">重置</text></view>

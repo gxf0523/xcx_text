@@ -1,0 +1,28 @@
+/* pages/timer/timer.wxss */
+.timerBox{
+  display: flex;
+  align-items: center;
+  font-size: 50rpx;
+  margin-top: 50rpx;
+  padding: 0 30rpx;
+}
+.timerBtn{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50rpx;
+  padding: 0 30rpx;
+}
+.timerBtn text{
+  color: #fff;
+  padding: 6rpx 20rpx;
+  border-radius: 10rpx;
+}
+.timerBtn text:nth-of-type(1){
+  background: blue;
+}
+.timerBtn text:nth-of-type(2){
+  background: gray;
+}
+.timerBtn text:nth-of-type(3){
+  background: red;
+}

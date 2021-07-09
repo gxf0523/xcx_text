@@ -27,7 +27,8 @@
     "pages/mapss/mapss",
     "pages/colorUIModel/colorUIModel",
     "pages/watermark/watermark",
-    "pages/watermarkTwo/watermarkTwo"
+    "pages/watermarkTwo/watermarkTwo",
+    "pages/timer/timer"
   ],
   "subPackages": [
     {
