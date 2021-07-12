@@ -43,7 +43,7 @@ Component({
 
         // 绘制背景图
         if (backgroundImageUrl) {
-          const { tempBackgroundImageUrl } =
+          const { path: tempBackgroundImageUrl } =
             this.uniGetImageInfoSync(backgroundImageUrl)
           ctx.drawImage(tempBackgroundImageUrl, 0, 0, width, height)
         }
@@ -60,7 +60,10 @@ Component({
           }
         }
 
-        ctx.draw()
+        ctx.draw(false, async () => {
+          const { tempFilePath } = await this.canvasToTempFilePath(canvasId, {})
+          resolve([canvasId, tempFilePath])
+        })
       })
     },
     // canvas 导出图片临时地址
@@ -85,15 +88,19 @@ Component({
     },
     // 获取图片信息（主要用于把远程 url转为微信临时文件以绘制图片）
     uniGetImageInfoSync(url) {
-      console.log('111')
-      console.log(url)
-      return new Promise((resolve, reject) => {
+      var promise = new Promise((resolve, reject) => {
         wx.getImageInfo({
           src: url,
-          success: resolve,
-          fail: reject
+          success: res=>{
+            console.log(res)
+            resolve(res)
+          },
+          fail: res => {
+            reject(res);
+          }
         })
       })
+      return promise;
     },
     //绘制文字
     canvasToDrawText(ctx, canvasParam) {
@@ -195,8 +202,10 @@ Component({
           this.canvasToDrawArcRectPath(ctx, x, y, width, height, radius)
 
           ctx.clip()
+          console.log(this.uniGetImageInfoSync(url))
 
-          const { tempImageUrl } = this.uniGetImageInfoSync(url)
+          const { path: tempImageUrl } = this.uniGetImageInfoSync(url)
+          
           console.log('3333',tempImageUrl, x, y, width, height)
           ctx.drawImage(tempImageUrl, x, y, width, height)
         }
@@ -256,10 +265,38 @@ Component({
 
       ctx.closePath()
     },
+    saveImageToPhotosAlbum() {
+      wx.saveImageToPhotosAlbum({
+        filePath: this.posterImage,
+        success: () => {
+          this.$emit('close-overlay')
+          wx.showToast({
+            title: '保存图片成功',
+            duration: 2000
+          })
+        },
+        fail(err) {
+          const { errMsg } = err
+          if (errMsg === 'saveImageToPhotosAlbum:fail auth deny') {
+            wx.showModal({
+              title: '保存失败',
+              content: '请授权保存图片到“相册”的权限',
+              success: (result) => {
+                const { confirm } = result
+                if (confirm) {
+                  wx.openSetting({})
+                }
+              }
+            })
+          }
+        }
+      })
+    }
   },
   lifetimes: {
     attached: function () { 
       console.log(this.properties.posterParams)
+      console.log(this.canvasToDraw())
       const posterImage = storage.get(this.data.cacheKey)
       if (posterImage && !this.data.disableCache) {
         this.setData({
@@ -273,8 +310,8 @@ Component({
       })
 
       this.data.isShowCanvas = true
-
-      const [canvasId, tempCanvasFilePaths] = this.canvasToDraw();
+      
+      const [tempCanvasFilePaths] = this.canvasToDraw();
       const fs = wx.getFileSystemManager();
       fs.saveFile({
         tempFilePath: tempCanvasFilePaths, // 传入一个本地临时文件路径

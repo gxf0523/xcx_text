@@ -23,7 +23,7 @@
     "compileHotReLoad": false,
     "useMultiFrameRuntime": true,
     "useApiHook": true,
-    "useApiHostProcess": true,
+    "useApiHostProcess": false,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -40,7 +40,7 @@
   },
   "compileType": "miniprogram",
   "libVersion": "2.17.0",
-  "appid": "wxec6f91d568dfbd62",
+  "appid": "wxe0cf2a94f54696fc",
   "projectname": "%E6%BB%91%E5%8A%A8%E9%80%89%E6%8B%A9%E8%BA%AB%E9%AB%98%E5%92%8C%E4%BD%93%E9%87%8D",
   "debugOptions": {
     "hidedInDevtools": []

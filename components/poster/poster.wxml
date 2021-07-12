@@ -1,5 +1,6 @@
 <view class="container">
     <canvas
+    type="2d"
       canvas-id="poster-canvas"
       class="poster-canvas"
       style="width: {{(posterParams.width || 0) }} 'px',height: {{(posterParams.height || 0)}}'px'"
@@ -13,7 +14,7 @@
         bindtap="previewImage"
         class="poster-image"
       />
-      <view class="share-btn" >
+      <view class="share-btn" bindtap="saveImageToPhotosAlbum">
         保存分享图
       </view>
     </view>
