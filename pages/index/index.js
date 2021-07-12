@@ -124,6 +124,10 @@ Page({
       {
         "title":"计时器",
         "url":"../timer/timer",
+      },
+      {
+        "title":"canvass画图并保存",
+        "url":"../savePicture/savePicture",
       }
     ],
     listData:[],

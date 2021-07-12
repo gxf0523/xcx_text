@@ -28,7 +28,8 @@
     "pages/colorUIModel/colorUIModel",
     "pages/watermark/watermark",
     "pages/watermarkTwo/watermarkTwo",
-    "pages/timer/timer"
+    "pages/timer/timer",
+    "pages/savePicture/savePicture"
   ],
   "subPackages": [
     {

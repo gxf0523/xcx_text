@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.poster-canvas {
+  position: fixed;
+  left: -99999999px;
+  top: -99999999px;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.poster-image {
+  width: 540rpx;
+  border-radius: 24rpx;
+}
+.share-btn {
+  width: 470rpx;
+  height: 40px;
+  border-radius: 40rpx;
+  background-color: #18ceb5;
+  margin: 40rpx auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  font-weight: 600;
+}

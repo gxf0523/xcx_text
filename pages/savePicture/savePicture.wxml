@@ -1,0 +1,45 @@
+<!--pages/savePicture/savePicture.wxml-->
+<view class="content">
+    <view class="product-container">
+      <view class="sub-title">MAGICAL MIRAI</view>
+      <view class="card-container">
+        <view class="card-content">
+          <image
+            src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-dc2b4a8f-6ab2-47b5-b744-f0c5745aa5c0/45669415-ea60-4641-9377-590b041d4663.png"
+            class="card-image"
+            bindtap="previewImage"
+          />
+        </view>
+        <view class="card-tail"></view>
+      </view>
+      <view class="title">
+        F:NEX VOCALOID 初音未来 魔法未来 2020 Summer Ver
+      </view>
+      <view class="price">不要钱，免费送</view>
+      <view class="share-btn" bindtap="handleShare"> 分享好友获更多抽奖机会 </view>
+      <view class="tips">参与抽奖后会同步关注店铺</view>
+    </view>
+    <view class="count-down-container">
+      <view class="count-down">
+        <view class="sub-title cd-sub-title">COUNT DOWN</view>
+        <view class="cd-detail">
+          <text>开奖倒计时</text>
+          <view class="cd-time">
+            <view class="time">20</view>
+            <view class="colon">:</view>
+            <view class="time">20</view>
+            <view class="colon">:</view>
+            <view class="time">20</view>
+          </view>
+          <view class="time-limit">2021-06-01 - 2021-07-01</view>
+        </view>
+      </view>
+    </view>
+    <view
+      class="overlay"
+      bindtap="onclose"
+      wx-if="{{showPosterOverlay}}"
+    >
+      <poster bind:onclose="onclose" posterParams="{{posterParams}}"/>
+    </view>
+  </view>

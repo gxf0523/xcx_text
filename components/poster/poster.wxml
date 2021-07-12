@@ -1,0 +1,20 @@
+<view class="container">
+    <canvas
+      canvas-id="poster-canvas"
+      class="poster-canvas"
+      style="width: {{(posterParams.width || 0) }} 'px',height: {{(posterParams.height || 0)}}'px'"
+      v-if="isShowCanvas"
+    ></canvas>
+    <view class="wrapper" wx-if="posterImage">
+      <image
+        src="{{posterImage}}"
+        mode="widthFix"
+        data-posterImage="{{posterImage}}"
+        bindtap="previewImage"
+        class="poster-image"
+      />
+      <view class="share-btn" >
+        保存分享图
+      </view>
+    </view>
+  </view>
