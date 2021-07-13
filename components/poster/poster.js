@@ -19,6 +19,36 @@ Component({
     isShowCanvas: false
   },
   methods: {
+    async pageInit() {
+      const posterImage = storage.get(this.properties.cacheKey)
+      if (posterImage && !this.properties.disableCache) {
+        this.setData({
+          posterImage
+        })
+        return
+      }
+      wx.showLoading({
+        title: '加载中...',
+        mask: true
+      })
+      this.setData({
+        isShowCanvas:true
+      })
+      const [tempCanvasFilePaths] = await this.canvasToDraw();
+      
+      const fs = wx.getFileSystemManager();
+      fs.saveFile({
+        tempFilePath: tempCanvasFilePaths, // 传入一个本地临时文件路径
+        success: (res) => {
+          storage.set(this.properties.cacheKey, res.savedFilePath, 86400000)
+          this.setData({
+            posterImage:res.savedFilePath
+          })
+        }
+      })
+
+      wx.hideLoading()
+    },
     previewImage(url) {
       wx.previewImage({
         urls: [url]
@@ -26,7 +56,7 @@ Component({
     },
     // 绘制 canvas
     canvasToDraw() {
-      return new Promise((resolve, reject) => {
+      return new Promise(async (resolve) => {
         const [ctx, canvasId] = this.createCanvasContext()
         const { width, height, backgroundImageUrl, backgroundColor } =
           this.properties.posterParams
@@ -38,13 +68,12 @@ Component({
             height,
             backgroundColor
           })
-          
         }
 
         // 绘制背景图
         if (backgroundImageUrl) {
           const { path: tempBackgroundImageUrl } =
-            this.uniGetImageInfoSync(backgroundImageUrl)
+          await this.uniGetImageInfoSync(backgroundImageUrl)
           ctx.drawImage(tempBackgroundImageUrl, 0, 0, width, height)
         }
 
@@ -56,10 +85,9 @@ Component({
           }
 
           if (type === 'block') {
-            this.canvasToDrawBlock(ctx, canvasParam)
+            await this.canvasToDrawBlock(ctx, canvasParam)
           }
         }
-
         ctx.draw(false, async () => {
           const { tempFilePath } = await this.canvasToTempFilePath(canvasId, {})
           resolve([canvasId, tempFilePath])
@@ -88,19 +116,13 @@ Component({
     },
     // 获取图片信息（主要用于把远程 url转为微信临时文件以绘制图片）
     uniGetImageInfoSync(url) {
-      var promise = new Promise((resolve, reject) => {
+      return new Promise((resolve, reject) => {
         wx.getImageInfo({
           src: url,
-          success: res=>{
-            console.log(res)
-            resolve(res)
-          },
-          fail: res => {
-            reject(res);
-          }
+          success: resolve,
+          fail: reject
         })
       })
-      return promise;
     },
     //绘制文字
     canvasToDrawText(ctx, canvasParam) {
@@ -166,7 +188,7 @@ Component({
     },
     // 绘制块元素
     canvasToDrawBlock(ctx, params) {
-      return new Promise((resolve,reject) => {
+      return new Promise(async (resolve) => {
         const {
           x,
           y,
@@ -202,11 +224,9 @@ Component({
           this.canvasToDrawArcRectPath(ctx, x, y, width, height, radius)
 
           ctx.clip()
-          console.log(this.uniGetImageInfoSync(url))
 
-          const { path: tempImageUrl } = this.uniGetImageInfoSync(url)
+          const { path: tempImageUrl } = await this.uniGetImageInfoSync(url)
           
-          console.log('3333',tempImageUrl, x, y, width, height)
           ctx.drawImage(tempImageUrl, x, y, width, height)
         }
 
@@ -267,7 +287,7 @@ Component({
     },
     saveImageToPhotosAlbum() {
       wx.saveImageToPhotosAlbum({
-        filePath: this.posterImage,
+        filePath: this.data.posterImage,
         success: () => {
           this.$emit('close-overlay')
           wx.showToast({
@@ -294,34 +314,8 @@ Component({
     }
   },
   lifetimes: {
-    attached: function () { 
-      console.log(this.properties.posterParams)
-      console.log(this.canvasToDraw())
-      const posterImage = storage.get(this.data.cacheKey)
-      if (posterImage && !this.data.disableCache) {
-        this.setData({
-          posterImage
-        })
-        return
-      }
-      wx.showLoading({
-        title: '加载中...',
-        mask: true
-      })
-
-      this.data.isShowCanvas = true
-      
-      const [tempCanvasFilePaths] = this.canvasToDraw();
-      const fs = wx.getFileSystemManager();
-      fs.saveFile({
-        tempFilePath: tempCanvasFilePaths, // 传入一个本地临时文件路径
-        success: (res) => {
-          storage.set(this.cacheKey, res.savedFilePath, 86400000)
-          this.posterImage = res.savedFilePath
-        }
-      })
-
-      wx.hideLoading()
+    attached: function () {
+      this.pageInit();
     }
   }
 })

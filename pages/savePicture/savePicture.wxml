@@ -38,7 +38,7 @@
     <view
       class="overlay"
       bindtap="onclose"
-      wx-if="{{showPosterOverlay}}"
+      wx:if="{{showPosterOverlay}}"
     >
       <poster bind:onclose="onclose" posterParams="{{posterParams}}"/>
     </view>
