@@ -3,7 +3,7 @@
       type="2d"
       canvas-id="poster-canvas"
       class="poster-canvas"
-      style="width: {{(posterParams.width || 0) }}px,height: {{(posterParams.height || 0)}}px"
+      style="width: {{(posterParams.width || 0) }}px;height: {{(posterParams.height || 0)}}px"
       wx:if="{{isShowCanvas}}"
     ></canvas>
     <view class="wrapper" wx:if="{{posterImage}}">
